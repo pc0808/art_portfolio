@@ -240,7 +240,7 @@ var graphics = [
   {imageURL: 'images/graphics/tcs6.jpg', type: 'web layout'},
   {imageURL: 'images/graphics/tcs5.png', type: 'web layout'},
   {imageURL: 'https://i.imgur.com/Zger7EJ.jpeg', type: 'web layout'},
-  {imageURL: 'https://i.imgur.com/QZpXhoD.png', type: 'web layout'},
+  {imageURL: 'images/graphics/tcs_layout.png', type: 'web layout'},
   {imageURL: 'https://i.imgur.com/lsrsV1W.png', type: 'web layout'},
   {imageURL: 'https://i.imgur.com/3W8tweQ.png', type: 'web layout'},
   {imageURL: 'https://i.imgur.com/1f6ccjK.png', type: 'design element'},
@@ -408,11 +408,11 @@ links = [
   {text: "Linkedin", link: "https://www.linkedin.com/in/promia-chowdhury/"},
 ];
 
-aboutContentText = "I am a 2024 graduate from MIT with a BS in <u><i>Computer Science</i></u> and a minor in Mathematics. ";
-aboutContentText += "I am currently looking for opportunities in <u><i>frontend or full-stack software engineering</i></u>, ";
+aboutContentText = "I am an MIT graduate with a BS in <u><i>Computer Science</i></u>, working as a NYC-based <u><i>UX designer</i></u>. ";
+aboutContentText += "With a multi-disciplinary background, I am open to opportunities in <u><i>software engineering</i></u> and <u><i>product</i></u>, ";
 aboutContentText += "to realize my goal in creating a larger space for human-made art and design in technology.<p>"
 aboutContentText += "My studies in Computer Science arose from my partipation in a <u><i>graphic design</i></u> community, ";
-aboutContentText += "which helped nurture my sense of style when it comes to HTML interfaces and UI/UX graphics. ";
+aboutContentText += "which helped nurture my sense of style when it comes to user interfaces and views in frontend programming (React, Vue, Angular). ";
 aboutContentText += "I am also passionate about my hobby in <u><i>digital art</i></u>, an extension of my design background."
 aboutContentText += "<p>In total, I have about 5-8 years of experience in each programming, design, and art."
 
@@ -477,7 +477,7 @@ text+='<button class="tabStyle"id="aboutTab"style="background:#111; color:#FAD02
 text+='onclick="openTab('+am+', this, '+yellowColor+')">about me</button>';
 text+='<button class="tabStyle" id="codingTab"onclick="openTab('+c+', this, '+yellowColor+')">coding</button>';
 text+='<button class="tabStyle" id="graphicsTab"onclick="openTab('+g+', this, '+yellowColor+')">graphics</button>';
-text+='<button class="tabStyle"id="artTab"onclick="openTab('+a+', this, '+yellowColor+')">art</button>';
+// text+='<button class="tabStyle"id="artTab"onclick="openTab('+a+', this, '+yellowColor+')">art</button>';
 text+='</div>';
 
 /*stuff inside the tabs*/
@@ -492,8 +492,8 @@ text+='</div>';
 text+='<div id="graphics" class="tabContent"style="display:none;margin:-5% 0 -8% 25px">';
 text+=graphicsContent+'</div>';
 
-text+='<div id="art" class="tabContent" style="display:none;margin:-5% 0 -8% 25px">';
-text+=digitalArt+'</div>';
+// text+='<div id="art" class="tabContent" style="display:none;margin:-5% 0 -8% 25px">';
+// text+=digitalArt+'</div>';
 
 document.getElementById("demo").innerHTML = text;
 
