@@ -1,41 +1,47 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alyamama:wght@300..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Rokkitt:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
-    <title>Promia's Portfolio</title>
+    <title>Prophicc Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
 /*things to do: reverse button, cursor, cursor changes when hovering over button */
 h2{
-  color: #FAD02C;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 400;
 }
 li{
   color: #fff;
-  font-size: 13px;
+  font-size: 15px;
   margin-left: 2%;
 }
 ul{
   list-style-type: square;
   text-emphasis: bold; 
-  color: #FAD02C;
+  color: #FFFFFF;
   margin-left: -2%;
 }
 div{
   font-size:98%;
-  font-family: trebuchet ms;
-  letter-spacing:1px;
+font-family: "Rokkitt", serif;  letter-spacing:1px;
   line-height:20px;
-  color:#eee;
+  color:#aaa;
+}
+body{
+  margin: 0;
 }
 .wholeThing{
-  margin:-20px;
-  min-height: 100dvh;
-  vertical-align: middle;
+  margin: 0;
   background: #111;
 }
 a{
-  color:#eee;
+  color:#aaa;
   text-decoration: none;
 }a:hover{cursor:cell}
 button{
@@ -43,7 +49,7 @@ button{
   padding:0;
   font:15px trebuchet ms;
   letter-spacing:2px;
-  color:#eee;
+  color:#aaa;
   border:0;
   transition: 0.5s ease-out;
 }button:focus { outline: none; }
@@ -104,56 +110,89 @@ blockquote{
   transition: 0.5s ease-out;
 }
 #about{
-  margin: -4% 0 0 2.2%;
+  flex: 0 0 30%;
+  min-width: 280px;
+  margin: 0;
   padding: 2% 3%;
   border: solid 1px #444;
   background-color: #111;
+  position: sticky;
+  top: 1rem;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
 }
 #textStyle4{
   margin-left: -4%;
 }
 .textStyle{
-  color:#ddd;
+  color:#aaa;
 }
 .aboutLinks{
-  font-size:16px;
+  font-size:15px;
   margin-top:4%;
   border:solid 1px #444;
   padding: 2% 3%;
 }
 .aboutLink{
   padding-right: 10px;
-  color: #444;
+  color: #aaa;
 }
 .aboutLink:hover{
-  color: #FAD02C;
+  color: #FFFFFF;
 }
 .codeHeader{
   text-emphasis: bold;
-  color: #FAD02C;
+  color: #FFFFFF;
 }
 .imageStyle{
-  width:79%;
-  border: solid 1px #444;
-  padding: 10%;
+  width:100%;
+  margin-top: 1rem;
+  /* border: solid 1px #444; */
+  /* padding: 10%; */
 }
 .content{
   overflow: hidden;
-  column-count: 3;
-  column-gap: 3%;
+  column-count: 2;
+  column-gap: 2rem;
   transition: 1.0s ease-out;
-  overflow: hidden;
-  margin: 1.5% 0 0 -31px;
-  height:10%;
-}.codingContent{
+  margin: 0;
+  height: auto;
+}
+.artPane{
+  flex: 1;
+  overflow-y: auto;
+  max-height: calc(100vh - 2rem);
+  padding-right: 1rem;
+}
+.layout{
+  display: flex;
+  gap: 2rem;
+  align-items: center; /* center children vertically within the row */
+  min-height: calc(100vh - 2rem);
+  padding-left: 2rem;
+}
+#about{
+  flex: 0 0 30%;
+  min-width: 280px;
+  margin: 0;
+  padding: 2% 3%;
+  border: solid 1px #444;
+  background-color: #111;
+  position: relative; /* do not stretch to full height */
+  top: auto;
+  max-height: none;
+  overflow: visible;
+  display: block;
+}
+.codingContent{
   overflow: hidden;
   transition: 1.0s ease-out;
   margin: 1.5% 0 0;
 }
 .entireContent{
-  margin:-820% -450% -200% -550%;
-  padding:215% 0;
-  background:0;
+  margin: 0;
+  padding: 1rem 0;
+  background: 0;
 }
 .collapsible{
   font-size: 20px;
@@ -181,12 +220,6 @@ blockquote{
   font-size: 15px;
 }.container:hover .expOverlay {
   opacity: 1.0;
-}.codingImage{
-  width:50%;
-}.codeTitle{
-  font-weight: bold;
-  font-size: 18px;
-  color: #FAD02C;
 }
 .reverse{
   background: #111;
@@ -211,85 +244,48 @@ blockquote{
 </head>
 <body>
 
-<div class="wholeThing"style="padding:0% 20%">
-  <div style="border:solid #444;border-width:0 1px;padding:0 20%">
-    <div style="border:solid #444;border-width:0 1px;padding:0 25%">
-      <div style="border:solid #444;border-width:0 1px;padding:0 35%">
-      <div style="margin:0 -200% 0 -200%;padding:390% 0;background:0;">
-
-  <div id="startPage"style="display: block;background:0">
-  
-
-
-
-</div></div>
-<div id="demo"class="entireContent">
+<div class="wholeThing"style="padding:0% 8%; margin 0;">
+  <div style="border:solid #444;border-width:0 1px;padding:0 10%; margin: 0;">
+    <div style="border:solid #444;border-width:0 1px;padding:0 15%; margin: 0;">
+       <div style="border:solid #444;border-width:0 1px;padding:0 15%; margin: 0;">
+         <div style="border:solid #444;border-width:0 1px;padding:0 15%; margin: 0;">
+      <div style="border:solid #444;border-width:0 1px;padding:0 15%">
+        <div style ="margin:0 -263%;">
+      
+<div id="demo" class="entireContent">
 </div>
-</div></div></div></div>
+</div></div></div></div></div></div></div>
 
 
 </body>
 <script>
 var i;
-var graphics = [
-  {imageURL: 'images/graphics/mockup.jpg', type: 'web layout'},
-  {imageURL: 'images/graphics/project_tab.jpg', type: 'web layout'},
-  {imageURL: 'https://i.imgur.com/Y0oZIiu.png', type: 'web layout'},
-  {imageURL: 'images/graphics/mockup_interact.jpg', type: 'web layout + interaction'},
-  {imageURL: 'https://i.imgur.com/VUx4SF5.jpeg', type: 'letterhead'},
-  {imageURL: 'images/graphics/tcs6.jpg', type: 'web layout'},
-  {imageURL: 'images/graphics/tcs5.png', type: 'web layout'},
-  {imageURL: 'https://i.imgur.com/Zger7EJ.jpeg', type: 'web layout'},
-  {imageURL: 'images/graphics/tcs_layout.png', type: 'web layout'},
-  {imageURL: 'https://i.imgur.com/lsrsV1W.png', type: 'web layout'},
-  {imageURL: 'https://i.imgur.com/3W8tweQ.png', type: 'web layout'},
-  {imageURL: 'https://i.imgur.com/1f6ccjK.png', type: 'design element'},
-  {imageURL: 'https://i.imgur.com/Z5Ziqg8.jpeg', type: 'letterhead'},
-  {imageURL: 'https://i.imgur.com/IX6p4YP.png', type: 'infographic'},
-  {imageURL: 'https://i.imgur.com/saigGFf.png', type: 'infographic'},
-  {imageURL: 'images/graphics/tcs1.jpg', type: 'web layout'},
-  {imageURL: 'images/graphics/tcs2.jpg', type: 'web layout'},
-  {imageURL: 'images/graphics/tcs3.jpg', type: 'web layout'},
-  {imageURL: 'images/graphics/tcs4.jpg', type: 'web layout'},
-  {imageURL: 'https://i.imgur.com/kJ1x4ov.png', type: 'wallpaper'},
-  {imageURL: 'https://i.imgur.com/gTNhLmx.png', type: 'infographic'},
-  {imageURL: 'https://i.imgur.com/CJkBWtn.png', type: 'infographic'},
-  {imageURL: 'https://i.imgur.com/h7Rn94x.png', type: 'infographic'},
-  {imageURL: 'https://i.imgur.com/SArnOOO.png', type: 'infographic'},
-  //{imageURL: 'https://i.imgur.com/xjo8Q3B.png', type: 'book cover'},
-  //{imageURL: 'https://i.imgur.com/iQRaEKp.png', type: 'book cover'},
-  {imageURL: 'https://i.imgur.com/ywX7a2B.png', type: 'book cover'},
-  {imageURL: 'https://i.imgur.com/EOme6pj.png', type: 'poster'},
-  {imageURL: 'https://i.imgur.com/wK1DybU.gif', type: 'infographic'},
-  {imageURL: 'https://i.imgur.com/iVrFFkf.png', type: 'wallpaper'},
-  //{imageURL: 'https://i.imgur.com/1uL6JVo.png', type: 'book cover'},
-  //{imageURL: 'https://i.imgur.com/We3fbYH.png', type: 'wallpaper'},
-  //{imageURL: 'https://i.imgur.com/uAAuMn6.png', type: 'infographic'},
-  {imageURL: 'https://i.imgur.com/UNXHN04.png', type: 'infographic'},
-  {imageURL: 'https://i.imgur.com/isyyuMl.jpg', type: 'infographic'},
-  {imageURL: 'https://i.imgur.com/DsyCnY6.jpg', type: 'infographic'},
-  /* {imageURL: 'link', type: ''}, */
-];
-
-graphicsDisplay = '';
-hoverImageText ='';
-for(var i = 0; i < graphics.length ; i++){
-  graphicsDisplay += '<div class="container">';
-  graphicsDisplay += '<img class="imageStyle"src="'+graphics[i].imageURL;
-  graphicsDisplay += '"><div class="overlay">';
-  graphicsDisplay += '<div class="contentType"><a href="'+graphics[i].imageURL+'">';
-  graphicsDisplay += graphics[i].type+'</a></div>';
-  graphicsDisplay += '</div></div><br>';
-}
-
 
 digArtDisplay ='';
 var art=[    
-  {image: 'images/art/couple.jpg',  type: 'illustration'},
-  {image: 'images/art/karina.jpg',  type: 'realism study'},
-  {image: 'images/art/lehenga.png',  type: 'ilustration'},
-  {image: 'images/art/luna2.jpg',  type: 'clothing study'},
+  {image: 'https://pbs.twimg.com/media/HJh39SsW0Ac-wF0?format=jpg&name=large',  type: 'illustration'}, 
+  {image: 'https://pbs.twimg.com/media/HJMcY-AWkAEK7Rc?format=jpg&name=large',  type: 'portrait'}, 
+
+
+  {image: 'https://64.media.tumblr.com/5254ebc72f618611a2d025eb1f37850f/e7e2d3e94d52e7d5-dc/s1280x1920/29b65e17840bb770ac7d2f67034daa456f4fc001.pnj',  type: 'character design'},  
+  {image: 'https://pbs.twimg.com/media/G_jJLIzWoAAx0Vu?format=jpg&name=large',  type: 'character design'}, 
+  {image: 'https://pbs.twimg.com/media/G-VI6BZXsAA30v6?format=jpg&name=large',  type: 'illustration'}, 
+  {image: 'https://64.media.tumblr.com/1e2330495dac61f5407ab49e051a005e/8a5fa89ce2c14249-f0/s2048x3072/b48f5448f830ca621db0c68957c4df874a9fb228.pnj',  type: 'illustration'}, 
+  {image: 'https://pbs.twimg.com/media/G7X4NG0WAAEC_ga?format=jpg&name=large',  type: 'illustration'}, 
+  {image: 'https://pbs.twimg.com/media/G0qHe9tW8AAt3rA?format=jpg&name=large',  type: 'portrait'}, 
+  {image: 'https://pbs.twimg.com/media/G4mzvQtWYAABnuP?format=jpg&name=large',  type: 'portrait'}, 
+  {image: 'https://64.media.tumblr.com/bac1c5957d15efc532e44b5c9488d44d/ac605d61b0d0409f-de/s1280x1920/f68ca7575d4a6718886cb8be6b9e7dd1aa1016ba.jpg',  type: 'illustration'}, 
+  {image: 'https://64.media.tumblr.com/e48cf5ba4409318e97a93cb56354b5bd/e022e3deabb6c61c-30/s1280x1920/19ef560c19220d267238bb597f7aad52c96d8be9.pnj',  type: 'portrait'},   
+  {image: 'https://64.media.tumblr.com/b57f1776a7b932330bae82080f314867/919427a9da3cfeb1-85/s1280x1920/adff593faae525bcaa87a29e094057a55e3bc113.pnj',  type: 'illustration'},   
+  {image: 'https://pbs.twimg.com/media/HIOtdd_XIAAcXP7?format=jpg&name=large',  type: 'illustration'},
+  // {image: 'images/art/karina.jpg',  type: 'realism study'},
+  // {image: 'images/art/lehenga.png',  type: 'ilustration'},
+  // {image: 'images/art/luna2.jpg',  type: 'clothing study'},
   {image: 'images/art/mamianqun.png',  type: 'character design'},
+  {image: 'https://pbs.twimg.com/media/HHKy89OXEAEU4rM?format=jpg&name=large',  type: 'illustration'}, 
+
+
+  {image: 'images/art/couple.jpg',  type: 'illustration'},
   {image: 'images/art/phoenix.png',  type: 'merchandise design'},
   {image: 'images/art/rhaegar.jpg',  type: 'illustration'},
   {image: 'images/art/shay.jpg',  type: 'clothing study'},
@@ -297,14 +293,15 @@ var art=[
   {image: 'images/art/wonbin2.jpg',  type: 'realism study'},
   {image: 'images/art/wonbin3.jpg',  type: 'clothing study'},
   {image: 'images/art/claud.PNG',  type: 'character design'},
-  {image: 'images/art/mena.PNG',  type: 'character design'},
+  
+  // {image: 'images/art/mena.PNG',  type: 'character design'},
 
-  {image: 'https://i.imgur.com/0Rpv1Qy.jpeg', type: 'illustration'},
+  // {image: 'https://i.imgur.com/0Rpv1Qy.jpeg', type: 'illustration'},
   {image: 'https://pbs.twimg.com/media/E8BdE7KVUAM3Pv_?format=jpg&name=large', type: 'concept art'},
-  {image: 'https://i.imgur.com/FvywSE9.jpg', type: 'illustration'},
-  {image: 'https://pbs.twimg.com/media/EtMEyorWgAAXui3?format=jpg&name=large', type: 'watercolor painting'},
-  {image: 'https://i.imgur.com/Ha7PNlv.jpg', type: 'watercolor study'},
-  {image: 'https://i.imgur.com/bsXsO9q.jpeg', type: 'mural'}, 
+  // {image: 'https://i.imgur.com/FvywSE9.jpg', type: 'illustration'},
+  // {image: 'https://pbs.twimg.com/media/EtMEyorWgAAXui3?format=jpg&name=large', type: 'watercolor painting'},
+  // {image: 'https://i.imgur.com/Ha7PNlv.jpg', type: 'watercolor study'},
+  // {image: 'https://i.imgur.com/bsXsO9q.jpeg', type: 'mural'}, 
   {image: 'images/art/dae.jpg',  type: 'character design'},
 /*  {image: '',  type: ''}, */
 ];
@@ -319,181 +316,57 @@ for (i =0; i< art.length; i++){
   digArtDisplay += '</div></div><br>';
 }
 
-var coding = [
-  {title: 'Chatbot', image1: 'images/coding/chatbot1.png', image2: 'images/coding/chatbot2.png', 
-  languages: 'TypeScript, HTML, CSS', features: 'LLM API integration, animated user interactions',
-  description: 'A chatbot powered by Google Gemini API, with real-time responses and interactive user elements ', link:'https://sparkling-bonbon-194061.netlify.app/'},
-  
-  {title: 'Easel', image1: 'images/coding/easel1.png', image2: 'images/coding/easel2.png', 
-  languages: 'TypeScript, HTML, CSS', features: 'Vue (React), Google Firebase photo backup, Server-client model, RESTful API design, NoSQL external database, reusable components', 
-  description:'Social media app where users can post images of their artwork, and create boards of user posts', link:'https://easel-f.vercel.app/'},
-  
-  {title: 'Tunetrainer', image1: 'images/coding/tunetrainer1.png', image2: 'images/coding/tunetrainer2.png',
-  languages: 'TypeScript, HTML, CSS', features: 'Vue (React), API calls to ChatGPT, Server-client model, RESTful API design, NoSQL external database, reusable components',
-  description: 'Final project for Software Studio (4 collaborators); I was responsible for API design, and majority of the frontend - generalized design components to be reusable with inputs. No longer deployed',
-  link: 'https://github.com/yanovsk/tunetrainer'},
-
-  {title: 'DOPE', image1: 'images/coding/dope1.gif', image2: 'images/coding/dope2.png',
-  languages: 'C, Python, JavaScript, HTML, CSS', features: 'Arduino screen & camera, SQL database & custom API, server display for inputs, image editing & image edit history on server',
-  description: 'A robotics project (5 collaborators) where users can manually capture images and upload to server, where further editing is possible; Responsible for processing server responses and designing server display',
-  link: 'https://pc0808.github.io/608-proj/final_report.md.html'
-  },
-
-  {title: "Promia's Portfolio", image1: 'images/coding/portfolio1.png', image2: 'images/coding/portfolio1.png',
-  languages: 'JavaScript, HTML, CSS', features: 'JS Animations, Transitions, No React',
-  description:'My personal portfolio, rehashed from high school. An experiment on design elements like hovers and transitions', link:'https://pc0808.github.io/portfolio/'},
-
-  {title: 'Webcats', image1: 'https://i.imgur.com/9aDmiJc.png', image2: 'https://i.imgur.com/rjgfIIq.png',
-  languages: "JavaScript, HTML, CSS", features: 'First try at database structure/design, primitive search option',
-    description:'Final team project for GWC. I was responsible for majority of the backend, including the search button, random generator and database analysis.',
-    link:'https://pc0808.github.io/webtoons/'},
-
-  {title: 'Area 51', image1: 'https://i.imgur.com/NHsxrco.png', image2: 'https://i.imgur.com/oE0ptTR.png',
-    languages: 'JavaScript, HTML, CSS', features: "User-interactive layout, Sound element inclusion",
-    description: "Made for fun in early days at GWC; I was responsible for arranging the layout and the design.", link:'https://pc0808.github.io/area51/'},
-  
-  /*{title: '', image1: '', image2: '', description:'', skills:'', link:''},
-  */
-];
-
-codingDisplay = '';
-
-for(var i = 0; i < coding.length ; i++){
-  codingDisplay += '<div class="container">';
-  codingDisplay += '<div style="border:solid 1px #444;padding: 2.5%;display:flex">';
-  codingDisplay += '<img class="codingImage"src="'+coding[i].image1+'">';
-  codingDisplay += '<img class="codingImage"src="'+coding[i].image2+'"></div>';
-  codingDisplay += '<div class="overlay"><div class="codingContentType">';
-  codingDisplay += '<span class="codeTitle">'+coding[i].title+'</span><p>';
-  codingDisplay += '<span class="codeHeader">Languages </span>▷ '+coding[i].languages+'<p>';
-  codingDisplay += '<span class="codeHeader">Notable Features </span>▷ '+coding[i].features+'<p>';
-  codingDisplay += '<span class="codeHeader">Description </span>▷ '+coding[i].description;
-  codingDisplay += '</p></div>';
-  codingDisplay += '</div></div><br>';
-}
-
-function openTab(tabName, elmnt, color) {
-  var i, tabcontent, tablinks;
-  var x = document.getElementsByClassName("tabContent");
-  tablinks = document.getElementsByClassName("tabStyle");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-    tablinks[i].style.border = "0";
-    tablinks[i].style.color = '#fff';
-  }
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(tabName).style.display = "block";
-  elmnt.style.backgroundColor = grayColor;
-  elmnt.style.color = color; 
-  elmnt.style.border = "solid 1px #FAD02C";
-}
-
 textOverlayBegin= '<span class="container">';
 textOverlayBegin+= '<span class="textOverlay">';
 textOverlayMiddle= '<span class="expOverlay"id="graphicHover">';
 textOverlayEnd= '</span></span>';
 am = "'about'";
-g = "'graphics'";
-c = "'coding'";
 a = "'art'";
 grayColor ="'#111'";
-yellowColor ="'#FAD02C'"
+yellowColor ="'#FFFFFF'"
 
 /* about me tab*/
 links = [
-  {text: "Email", link: "mailto:Chowdhurypromia@gmail.com"},
-  {text: "Github", link: "https://github.com/pc0808"},
-  {text: "Linkedin", link: "https://www.linkedin.com/in/promia-chowdhury/"},
+  {text: "Email", link: "mailto:prophicc8@gmail.com"},
+  {text: "Vgen", link: "https://vgen.co/prophicc"},
+  {text: "X/Twitter", link: "https://x.com/prophicc"},
+  {text: "Tumblr", link: "https://www.tumblr.com/prophicc"},
 ];
 
-aboutContentText = "I am an MIT graduate with a BS in <u><i>Computer Science</i></u>, working as a NYC-based <u><i>UX designer</i></u>. ";
-aboutContentText += "With a multi-disciplinary background, I am open to opportunities in <u><i>software engineering</i></u> and <u><i>product</i></u>, ";
-aboutContentText += "to realize my goal in creating a larger space for human-made art and design in technology.<p>"
-aboutContentText += "My studies in Computer Science arose from my partipation in a <u><i>graphic design</i></u> community, ";
-aboutContentText += "which helped nurture my sense of style when it comes to user interfaces and views in frontend programming (React, Vue, Angular). ";
-aboutContentText += "I am also passionate about my hobby in <u><i>digital art</i></u>, an extension of my design background."
-aboutContentText += "<p>In total, I have about 5-8 years of experience in each programming, design, and art."
+aboutContentText = "I am a digital artist specializing in <u><i>illustrations</i></u> and <u><i>character design</i></u>. I have semi-formal training in figure drawing, ";
+aboutContentText += "and I am passionate about improving my craft for professional work.";
+// aboutContentText += "to realize my goal in creating a larger space for human-made art and design in technology.<p>"
+// aboutContentText += "My studies in Computer Science arose from my partipation in a <u><i>graphic design</i></u> community, ";
+// aboutContentText += "which helped nurture my sense of style when it comes to user interfaces and views in frontend programming (React, Vue, Angular). ";
+// aboutContentText += "I am also passionate about my hobby in <u><i>digital art</i></u>, an extension of my design background."
+// aboutContentText += "<p>In total, I have about 5-8 years of experience in each programming, design, and art."
 
-aboutLinks = '<span style="text=emphasis: bold; color: #FAD02C">Contact Me</span>     ▷ '
+aboutLinks = '<span style="text=emphasis: bold; color: #FFFFFF">Contact Me</span>     ▷ '
 for(const link of links){
   aboutLinks += '<a class="aboutLink"href = "'+link.link+'">'+link.text+'</a>';
 }
 
+/* art tab */
+digitalArtText = '<span class="codeHeader" style="font-size:15px">Program </span>▷ Procreate app on iPad Pro ';
+digitalArtText +='<br><span class="codeHeader" style="font-size:15px;"> Experience </span>▷ 6 years+';
+
 aboutContent ='<div class="textStyle">';
 aboutContent += aboutContentText+'</div>';
+aboutContent += '<div class="aboutLinks" style="margin:1rem 0 1rem 0; font-size:15px">'+digitalArtText+'</div>';
 aboutContent+='<div class="aboutLinks">'+aboutLinks+'</div>';
 
-/* graphics tab */
-graphicsContentText = '<div style="column-count: 2;margin-left: -31px;">';
-graphicsContentText += '<div class="aboutLinks"style="padding:1%; margin-top:0"><p><ul>Programs ▷';
-graphicsContentText += '<li>Adobe Photoshop</li>';
-graphicsContentText += '<li>Adobe Illustrate</li>';
-graphicsContentText += '<li>Procreate</li>';
-graphicsContentText += '<li>Adobe Premiere Pro</li></ul></div>';
-graphicsContentText += '<div class="aboutLinks"style="padding:2% 3%; font-size: 13px">';
-graphicsContentText += 'This is a culmination of my best works; <b>Not all</b> are used for commercial purposes.';
-graphicsContentText += '<p>Many of these works are requests/commissions, so the subjects depicted on ';
-graphicsContentText+= 'them are not a reflection of me and my interests/values.</p>';
-graphicsContentText += '</div>';
-
-gcOverText = 'graphic design has enabled me to transition very quickly to coding';
-
-graphicsContent ='<div class="textStyle"id="textStyle"'
-graphicsContent += graphicsContentText+'</div>';
-
-graphicsContent += '<div class="content"id="imageDiv">'+graphicsDisplay+'</div>';
-
-
-/* art tab */
-digitalArtText = '<span class="codeHeader"style="font-size:16px">Program </span>▷ Procreate app on iPad Pro ';
-digitalArtText +='<span class="codeHeader"style="font-size:16px;margin-left:4%"> Experience </span>▷ 5 years+';
-
-digitalArt ='<div class="aboutLinks"style="margin:0 0 1% -31px; font-size:14px">'+digitalArtText+'</div>';
-digitalArt += '<div class="content"id="imageDiv2" style="margin-top:4%">'+digArtDisplay;
+digitalArt = '<div class="content" id="imageDiv2" style="margin-top:-1rem">'+digArtDisplay;
 digitalArt += '</div>';
 
-
-/*coding tab*/
-codingContentText = '<div style="column-count: 2">';
-codingContentText += '<div class="aboutLinks"style="padding:1%;margin-top:0"><ul>Languages';
-codingContentText += '<li>Typescript, Java/JavaScript, HTML, CSS (web)</li>';
-codingContentText += '<li>Python, Julia</li>'
-codingContentText += '<li>C/C++</li></ul></div>'
-
-codingContentText += '<div class="aboutLinks"style="padding:1%;margin-top:3%"><ul>Skills';
-codingContentText += '<li>SQL, NoSQL (MongoDB) integration</li>';
-codingContentText += '<li>RESTful API routing/design</li>'
-codingContentText += '<li>Vue (React-based) interfacing</li></ul></div>'
-codingContentText += '</div>'
-
-codingContent ='<div class="textStyle"id="textStyle4">'+codingContentText;
-codingContent += '<div class="codingContent"id="imageDiv4">'+codingDisplay+ '</div></div>';
-
-/* tabs + their styles/names */
-text ='<div style="margin-bottom:10%">';
-text+='<button class="tabStyle"id="aboutTab"style="background:#111; color:#FAD02C; border:solid 1px #FAD02C;"'
-text+='onclick="openTab('+am+', this, '+yellowColor+')">about me</button>';
-text+='<button class="tabStyle" id="codingTab"onclick="openTab('+c+', this, '+yellowColor+')">coding</button>';
-text+='<button class="tabStyle" id="graphicsTab"onclick="openTab('+g+', this, '+yellowColor+')">graphics</button>';
-// text+='<button class="tabStyle"id="artTab"onclick="openTab('+a+', this, '+yellowColor+')">art</button>';
-text+='</div>';
-
-/*stuff inside the tabs*/
-text+='<div id="about" class="tabContent">';
-text+='<h2 id ="aboutHeader">Promia Chowdhury</h2><p>'+aboutContent+'</p>';
-text+='</div>';
-
-text+='<div id="coding" class="tabContent" style="display:none;margin:-5% 0 -8% 26px">';
-text+='<p style="margin-left:25px">'+codingContent+'</p>';
-text+='</div>';
-
-text+='<div id="graphics" class="tabContent"style="display:none;margin:-5% 0 -8% 25px">';
-text+=graphicsContent+'</div>';
-
-// text+='<div id="art" class="tabContent" style="display:none;margin:-5% 0 -8% 25px">';
-// text+=digitalArt+'</div>';
+/* single-page split layout */
+text = '<div class="layout">';
+text += '<div id="about">';
+text += '<h2 id="aboutHeader">Prophicc</h2><p>' + aboutContent + '</p>';
+text += '</div>';
+text += '<div class="artPane">';
+text += digitalArt;
+text += '</div>';
+text += '</div>';
 
 document.getElementById("demo").innerHTML = text;
 
